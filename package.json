@@ -1,29 +1,22 @@
 {
-  "name": "zelton",
+  "name": "zelton-workspace",
   "version": "1.0.0",
-  "description": "ZELTON - Modern In-Browser Digital Audio Workstation",
-  "type": "module",
+  "private": true,
+  "description": "ZELTON (SonicForge Studio) - Complete Monorepo with Frontend DAW & Backend Server",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "vitest run"
-  },
-  "dependencies": {
-    "lucide-react": "^1.16.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "dev": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:all": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev:backend\"",
+    "build": "npm run build --workspace=frontend",
+    "build:all": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "test": "npm run test --workspace=frontend",
+    "start": "npm run start --workspace=backend"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.3",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.6.1",
-    "postcss": "^8.5.30",
-    "tailwindcss": "^4.3.3",
-    "typescript": "^5.7.3",
-    "vite": "^6.2.0",
-    "vitest": "^3.0.7"
+    "concurrently": "^9.1.2"
   }
 }
