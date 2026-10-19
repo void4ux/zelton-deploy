@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .grid-cols-16 {
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+}
+
+/* ─── SONICFORGE STUDIO DESIGN SYSTEM (Analog & Digital Pro Audio Console) ─── */
+:root {
+  --sf-bg-app: #0e1015;
+  --sf-bg-surface: #14171f;
+  --sf-bg-card: #1b1e28;
+  --sf-bg-elevated: #222633;
+  --sf-bg-hover: #292e3d;
+  --sf-border: #282d3c;
+  --sf-border-subtle: #1e222e;
+  --sf-border-light: #373e52;
+
+  /* Matte Pro Audio Accents (Zero harsh neon/AI glowing) */
+  --sf-accent-red: #d93829;
+  --sf-accent-blue: #0284c7;
+  --sf-accent-iris: #6366f1;
+  --sf-accent-green: #059669;
+  --sf-accent-amber: #d97706;
+
+  /* Typography */
+  --sf-text-primary: #e2e8f0;
+  --sf-text-secondary: #94a3b8;
+  --sf-text-muted: #64748b;
+  --sf-text-dim: #475569;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--sf-bg-app);
+  color: var(--sf-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Refined Studio Scrollbars ─── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2d3345; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3d455d; }
+
+/* ─── Hardware Style Fader / Rotary Sliders ─── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #191c26;
+  border: 1px solid #252a38;
+  border-radius: 4px;
+  height: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 12px;
+  border-radius: 2px;
+  background: #cbd5e1;
+  border: 1px solid #475569;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.1s, transform 0.1s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+/* ─── Subtle Recording Tally (No harsh blinding flare) ─── */
+@keyframes studio-rec-tally {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-rec-pulse {
+  animation: studio-rec-tally 1.5s ease-in-out infinite;
+}
+
+/* ─── Native Hardware Selects ─── */
+select {
+  background-color: #171a23;
+  color: #e2e8f0;
+  border: 1px solid #2a2f3e;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  outline: none;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #3b82f6;
+}
+
+/* ─── Studio Button Feel ─── */
+button {
+  cursor: pointer;
+}
