@@ -86,13 +86,7 @@ npm test
 npm run build
 ```
 
----
+## Live Demo & Deployment
+- **Live Website**: [https://void4ux.github.io/zelton-deploy/](https://void4ux.github.io/zelton-deploy/)
+- **Repository**: [https://github.com/void4ux/zelton-deploy](https://github.com/void4ux/zelton-deploy)
 
-## Documentation Links
-- [Architecture & DSP Pipeline](file:///Users/apple/Desktop/jb/zelton/ARCHITECTURE.md)
-- [Implementation Plan & Milestones](file:///Users/apple/Desktop/jb/zelton/IMPLEMENTATION_PLAN.md)
-- [Feature Specifications](file:///Users/apple/Desktop/jb/zelton/FEATURES.md)
-- [Testing & Verification](file:///Users/apple/Desktop/jb/zelton/TESTING.md)
-- [Security & Privacy Policy](file:///Users/apple/Desktop/jb/zelton/SECURITY.md)
-- [Changelog](file:///Users/apple/Desktop/jb/zelton/CHANGELOG.md)
-- [Third Party Notices](file:///Users/apple/Desktop/jb/zelton/THIRD_PARTY_NOTICES.md)
